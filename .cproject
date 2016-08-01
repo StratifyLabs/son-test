@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187" moduleId="org.eclipse.cdt.core.settings" name="build_release_armv7m">
+				<macros>
+					<stringMacro name="POSTPROCESS" type="VALUE_TEXT" value="${POSTPROCESS_${OsType}}"/>
+					<stringMacro name="TOOLSPATH" type="VALUE_TEXT" value="${TOOLSPATH_${OsType}}"/>
+					<stringMacro name="CXX_FLAGS" type="VALUE_TEXT" value="${C_FLAGS} -fno-rtti -fno-exceptions -fno-threadsafe-statics -fno-unwind-tables -fno-use-cxa-atexit"/>
+					<stringMacro name="POSTPROCESS_macosx" type="VALUE_TEXT" value="sh ${TOOLSPATH}/${HOST}/lib/ldscripts/app-post-process.sh"/>
+					<stringMacro name="BUILD_TYPE" type="VALUE_TEXT" value=""/>
+					<stringMacro name="TOOLSPATH_win64" type="VALUE_TEXT" value="${TOOLSPATH_win32}"/>
+					<stringMacro name="HOST" type="VALUE_TEXT" value="arm-none-eabi"/>
+					<stringMacro name="RM_win64" type="VALUE_TEXT" value="${RM_win32}"/>
+					<stringMacro name="RM_win32" type="VALUE_TEXT" value="${TOOLSPATH}/${HOST}/lib/ldscripts/clean.bat"/>
+					<stringMacro name="TOOLSPATH_win32" type="VALUE_TEXT" value="C:/StratifyLabs-SDK/Tools/gcc"/>
+					<stringMacro name="POSTPROCESS_win64" type="VALUE_TEXT" value="${POSTPROCESS_win32}"/>
+					<stringMacro name="C_FLAGS" type="VALUE_TEXT" value="-D__StratifyOS__ -D__${BUILD_DEVICE} -D__${BUILD_TYPE} -mlong-calls -ffunction-sections -march=${BUILD_ARCH} -mthumb"/>
+					<stringMacro name="POSTPROCESS_win32" type="VALUE_TEXT" value="${TOOLSPATH}/${HOST}/lib/ldscripts/app-post-process.bat"/>
+					<stringMacro name="RM_macosx" type="VALUE_TEXT" value="rm -rf"/>
+					<stringMacro name="C_FLAGS_ARMV7EM_FPU" type="VALUE_TEXT" value="-mfloat-abi=hard -mfpu=fpv4-sp-d16 -U__SOFTFP__ -D__FPU_USED"/>
+					<stringMacro name="TOOLSPATH_macosx" type="VALUE_TEXT" value="/Applications/StratifyLabs-SDK/Tools/gcc"/>
+					<stringMacro name="BUILD_DEVICE" type="VALUE_TEXT" value="armv7m"/>
+					<stringMacro name="RM" type="VALUE_TEXT" value="${RM_${OsType}}"/>
+					<stringMacro name="BUILD_FLOAT" type="VALUE_TEXT" value="."/>
+					<stringMacro name="BUILD_NAME" type="VALUE_TEXT" value="Unused"/>
+					<stringMacro name="BUILD_ARCH" type="VALUE_TEXT" value="armv7-m"/>
+					<stringMacro name="RAM_SIZE" type="VALUE_TEXT" value="4096"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${RM}" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187" name="build_release_armv7m" parent="cdt.managedbuild.config.gnu.cross.exe.release" postbuildStep="${POSTPROCESS} ${TOOLSPATH} ${HOST} ${ProjName} ${BUILD_NAME} ${BUILD_ARCH} ${BUILD_FLOAT} ${BUILD_TYPE}">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.440758377" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="false" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.131683989" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="${HOST}-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.1696340820" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value=" ${PathDelimiter}${TOOLSPATH}/bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1878548434" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/HelloWorld}/Release" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1550412214" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.564376669" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.2031569760" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.728845853" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.335916525" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.misc.other.1754110943" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c ${C_FLAGS}" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1710475818" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.772723033" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.2124984081" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.137942992" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1617765176" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c ${CXX_FLAGS}" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1607840445" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1628522044" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1862701735" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.565127389" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="gnu.cpp.link.option.nostdlibs.1851377052" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.libs.1424286330" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="app"/>
+									<listOptionValue builtIn="false" value="stratify_crt"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.1464609774" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="-Wl,-Map,${ProjName}.map,--defsym=_app_ram_size=${RAM_SIZE},--gc -Tldscripts/app.ld -u crt" valueType="string"/>
+								<option id="gnu.cpp.link.option.nostart.740808621" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.paths.1036365964" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${TOOLSPATH}/${HOST}/lib/${BUILD_ARCH}/${BUILD_FLOAT}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1305693201" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.598045799" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.443960510" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1568557479" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1360845710">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1360845710" moduleId="org.eclipse.cdt.core.settings" name="build_release_armv7em_fpu">
+				<macros>
+					<stringMacro name="POSTPROCESS" type="VALUE_TEXT" value="${POSTPROCESS_${OsType}}"/>
+					<stringMacro name="CXX_FLAGS" type="VALUE_TEXT" value="${C_FLAGS} -fno-rtti -fno-exceptions -fno-threadsafe-statics -fno-unwind-tables -fno-use-cxa-atexit"/>
+					<stringMacro name="TOOLSPATH" type="VALUE_TEXT" value="${TOOLSPATH_${OsType}}"/>
+					<stringMacro name="POSTPROCESS_macosx" type="VALUE_TEXT" value="sh ${TOOLSPATH}/${HOST}/lib/ldscripts/app-post-process.sh"/>
+					<stringMacro name="BUILD_TYPE" type="VALUE_TEXT" value=""/>
+					<stringMacro name="TOOLSPATH_win64" type="VALUE_TEXT" value="${TOOLSPATH_win32}"/>
+					<stringMacro name="HOST" type="VALUE_TEXT" value="arm-none-eabi"/>
+					<stringMacro name="RM_win64" type="VALUE_TEXT" value="${RM_win32}"/>
+					<stringMacro name="RM_win32" type="VALUE_TEXT" value="${TOOLSPATH}/${HOST}/lib/ldscripts/clean.bat"/>
+					<stringMacro name="TOOLSPATH_win32" type="VALUE_TEXT" value="C:/StratifyLabs-SDK/Tools/gcc"/>
+					<stringMacro name="POSTPROCESS_win64" type="VALUE_TEXT" value="${POSTPROCESS_win32}"/>
+					<stringMacro name="C_FLAGS" type="VALUE_TEXT" value="-D__StratifyOS__ -D__${BUILD_DEVICE} -D__${BUILD_TYPE} -mlong-calls -ffunction-sections -march=${BUILD_ARCH} -mthumb ${C_FLAGS_ARMV7EM_FPU}"/>
+					<stringMacro name="POSTPROCESS_win32" type="VALUE_TEXT" value="${TOOLSPATH}/${HOST}/lib/ldscripts/app-post-process.bat"/>
+					<stringMacro name="RM_macosx" type="VALUE_TEXT" value="rm -rf"/>
+					<stringMacro name="C_FLAGS_ARMV7EM_FPU" type="VALUE_TEXT" value="-mfloat-abi=hard -mfpu=fpv4-sp-d16 -U__SOFTFP__ -D__FPU_USED"/>
+					<stringMacro name="SL" type="VALUE_TEXT" value="${DirectoryDelimiter}"/>
+					<stringMacro name="TOOLSPATH_macosx" type="VALUE_TEXT" value="/Applications/StratifyLabs-SDK/Tools/gcc"/>
+					<stringMacro name="BUILD_DEVICE" type="VALUE_TEXT" value="armv7em"/>
+					<stringMacro name="RM" type="VALUE_TEXT" value="${RM_${OsType}}"/>
+					<stringMacro name="BUILD_NAME" type="VALUE_TEXT" value="Unused"/>
+					<stringMacro name="BUILD_FLOAT" type="VALUE_TEXT" value="fpu/fpv5-sp-d16"/>
+					<stringMacro name="BUILD_ARCH" type="VALUE_TEXT" value="armv7e-m"/>
+					<stringMacro name="RAM_SIZE" type="VALUE_TEXT" value="4096"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${RM}" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1360845710" name="build_release_armv7em_fpu" parent="cdt.managedbuild.config.gnu.cross.exe.release" postbuildStep="${POSTPROCESS} ${TOOLSPATH} ${HOST} ${ProjName} ${BUILD_NAME} ${BUILD_ARCH} ${BUILD_FLOAT} ${BUILD_TYPE}">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1360845710." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.762582144" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="false" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.231202084" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="${HOST}-" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.152108898" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value=" ${PathDelimiter}${TOOLSPATH}/bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.572789559" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/HelloWorld}/Release" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.315223237" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.616156074" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1727116031" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.302937115" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1061242658" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.misc.other.1495834933" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c ${C_FLAGS}" valueType="string"/>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1569713514" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.286624808" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.180578732" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.921833391" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1632678658" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c ${CXX_FLAGS}" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1045350151" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false"/>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.452161136" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.2141023932" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.2096686216" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="gnu.cpp.link.option.nostdlibs.1161957413" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.libs.1796428434" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="app"/>
+									<listOptionValue builtIn="false" value="stratify_crt"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.673939258" name="Linker flags" superClass="gnu.cpp.link.option.flags" value="-Wl,-Map,${ProjName}.map,--defsym=_app_ram_size=${RAM_SIZE},--gc -Tldscripts/app.ld -u crt" valueType="string"/>
+								<option id="gnu.cpp.link.option.nostart.1951725097" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" value="true" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.paths.799588623" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${TOOLSPATH}/${HOST}/lib/${BUILD_ARCH}/${BUILD_FLOAT}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.970605767" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.123652984" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.1928517564" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1677405266" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1602081794">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1602081794" moduleId="org.eclipse.cdt.core.settings" name="build_release_link">
+				<macros>
+					<stringMacro name="CXX" type="VALUE_TEXT" value="${CXX_${OsType}}"/>
+					<stringMacro name="INSTALLPATH" type="VALUE_TEXT" value="${INSTALLPATH_${OsType}}"/>
+					<stringMacro name="TOOLSPATH" type="VALUE_TEXT" value="${TOOLSPATH_${OsType}}"/>
+					<stringMacro name="POSTPROCESS_macosx" type="VALUE_TEXT" value="sh ${TOOLSPATH}/${HOST}/lib/ldscripts/lib-post-process.sh"/>
+					<stringMacro name="HOST" type="VALUE_TEXT" value="."/>
+					<stringMacro name="CXX_linux" type="VALUE_TEXT" value="g++"/>
+					<stringMacro name="RM_win32" type="VALUE_TEXT" value="${INSTALLPATH}/${HOST}/lib/ldscripts/clean.bat"/>
+					<stringMacro name="TOOLSPATH_win32" type="VALUE_TEXT" value="C:\Qt\Tools\mingw492_32"/>
+					<stringMacro name="POSTPROCESS_win64" type="VALUE_TEXT" value="${POSTPROCESS_win32}"/>
+					<stringMacro name="INSTALLPATH_macosx" type="VALUE_TEXT" value="${TOOLSPATH_macosx}"/>
+					<stringMacro name="CXX_win64" type="VALUE_TEXT" value="${CXX_win32}"/>
+					<stringMacro name="CC_win32" type="VALUE_TEXT" value="i686-w64-mingw32-gcc"/>
+					<stringMacro name="SL" type="VALUE_TEXT" value="${DirectoryDelimiter}"/>
+					<stringMacro name="POSTPROCESS_linux" type="VALUE_TEXT" value="${POSTPROCESS_macosx}"/>
+					<stringMacro name="BUILD_DEVICE" type="VALUE_TEXT" value="link"/>
+					<stringMacro name="INSTALLPATH_win32" type="VALUE_TEXT" value="C:\StratifyLabs-SDK\Tools\gcc"/>
+					<stringMacro name="CC" type="VALUE_TEXT" value="${CC_${OsType}}"/>
+					<stringMacro name="POSTPROCESS" type="VALUE_TEXT" value="${POSTPROCESS_${OsType}}"/>
+					<stringMacro name="TOOLSPATH_win64" type="VALUE_TEXT" value="${TOOLSPATH_win32}"/>
+					<stringMacro name="CC_macosx" type="VALUE_TEXT" value="clang ${CCFLAGS_macosx}"/>
+					<stringMacro name="RM_win64" type="VALUE_TEXT" value="${RM_win32}"/>
+					<stringMacro name="TOOLSPATH_linux" type="VALUE_TEXT" value="${TOOLSPATH_macosx}"/>
+					<stringMacro name="RM_linux" type="VALUE_TEXT" value="${RM_macosx}"/>
+					<stringMacro name="CXX_win32" type="VALUE_TEXT" value="i686-w64-mingw32-g++"/>
+					<stringMacro name="POSTPROCESS_win32" type="VALUE_TEXT" value="${INSTALLPATH}/${HOST}/lib/ldscripts/lib-post-process.bat"/>
+					<stringMacro name="CC_win64" type="VALUE_TEXT" value="${CC_win32}"/>
+					<stringMacro name="RM_macosx" type="VALUE_TEXT" value="rm -rf"/>
+					<stringMacro name="INSTALLPATH_win64" type="VALUE_TEXT" value="${INSTALLPATH_win32}"/>
+					<stringMacro name="CC_linux" type="VALUE_TEXT" value="gcc"/>
+					<stringMacro name="TOOLSPATH_macosx" type="VALUE_TEXT" value="/Applications/StratifyLabs-SDK/Tools/gcc"/>
+					<stringMacro name="RM" type="VALUE_TEXT" value="${RM_${OsType}}"/>
+					<stringMacro name="CCFLAGS_macosx" type="VALUE_TEXT" value="-m64 -arch x86_64 -mmacosx-version-min=10.7"/>
+					<stringMacro name="BUILD_FLOAT" type="VALUE_TEXT" value="."/>
+					<stringMacro name="BUILD_NAME" type="VALUE_TEXT" value="son"/>
+					<stringMacro name="CXX_macosx" type="VALUE_TEXT" value="clang++ ${CCFLAGS_macosx}"/>
+					<stringMacro name="INSTALLPATH_linux" type="VALUE_TEXT" value="${INSTALLPATH_macosx}"/>
+					<stringMacro name="BUILD_ARCH" type="VALUE_TEXT" value="."/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${RM}" description="" id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1602081794" name="build_release_link" parent="cdt.managedbuild.config.gnu.cross.exe.release" postbuildStep="">
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.933537612.2007164391.1935209187.1602081794." name="/" resourcePath="">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.1608394686" name="Cross GCC" nonInternalBuilderId="cdt.managedbuild.builder.gnu.cross" resourceTypeBasedDiscovery="false" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
+							<option id="cdt.managedbuild.option.gnu.cross.prefix.993323309" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.988873876" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value=" ${PathDelimiter}${TOOLSPATH}/bin" valueType="string"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1966416338" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
+							<builder autoBuildTarget="all" buildPath="${workspace_loc:/HelloWorld}/Release" cleanBuildTarget="clean" id="org.eclipse.cdt.build.core.internal.builder.1273423400" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="org.eclipse.cdt.build.core.internal.builder"/>
+							<tool command="${CC}" id="cdt.managedbuild.tool.gnu.cross.c.compiler.1125643405" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
+								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.529730995" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.debugging.level.1542882377" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1669811850" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.misc.other.976311225" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c ${C_FLAGS}" valueType="string"/>
+								<option id="gnu.c.compiler.option.dialect.std.972488055" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.include.paths.907245811" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${INSTALLPATH}&quot;/include"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1900422887" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool command="${CXX}" id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.881649806" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
+								<option id="gnu.cpp.compiler.option.optimization.level.1189346701" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.size" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.debugging.level.524021174" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.other.other.1003717791" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c ${CXX_FLAGS}" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1458920149" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.include.paths.1816656114" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${INSTALLPATH}&quot;/include"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.912754985" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.700717819" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
+							<tool command="${CXX}" id="cdt.managedbuild.tool.gnu.cross.cpp.linker.432577659" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
+								<option id="gnu.cpp.link.option.nostdlibs.1219553293" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.libs.514790672" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" value="son"/>
+								</option>
+								<option id="gnu.cpp.link.option.flags.1710416035" name="Linker flags" superClass="gnu.cpp.link.option.flags" useByScannerDiscovery="false" value="" valueType="string"/>
+								<option id="gnu.cpp.link.option.nostart.1459036174" name="Do not use standard start files (-nostartfiles)" superClass="gnu.cpp.link.option.nostart" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="gnu.cpp.link.option.paths.1673764411" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${TOOLSPATH}/${HOST}/lib/${BUILD_ARCH}/${BUILD_FLOAT}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1899282905" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.604093133" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.290234395" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.738018451" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="son-test.cdt.managedbuild.target.gnu.cross.exe.101539857" name="Executable" projectType="cdt.managedbuild.target.gnu.cross.exe"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="build_release_link">
+			<resource resourceType="PROJECT" workspacePath="/son-test"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/son-test"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1469858310;cdt.managedbuild.config.gnu.cross.exe.release.1469858310.;cdt.managedbuild.tool.gnu.cross.c.compiler.81059214;cdt.managedbuild.tool.gnu.c.compiler.input.250977682">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cross.exe.release.1469858310;cdt.managedbuild.config.gnu.cross.exe.release.1469858310.;cdt.managedbuild.tool.gnu.cross.cpp.compiler.1030193692;cdt.managedbuild.tool.gnu.cpp.compiler.input.903984317">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+</cproject>
