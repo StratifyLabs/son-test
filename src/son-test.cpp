@@ -36,6 +36,15 @@ void test_son_method1(){
 	//son_open_obj(&h,"age");
 	son_write_num(&h,"age",17);
 
+	son_write_float(&h,"price",10.10);
+
+	char i[2] = "2";
+	void * t = (void *) i;
+
+	son_write_data(&h,"data",t,2);
+
+	printf("son_write_false() ret = %d\n",son_write_false(&h,"instock"));
+
 	son_close_obj(&h);
 	son_close_obj(&h);
 
@@ -47,10 +56,17 @@ void test_son_method1(){
 	son_open(&h, "/Users/nkgau/Desktop/test.son");
 
 	son_read_str(&h, "name.last", buffer, 32);
+	printf("last name is %s\n", buffer);
 	printf("age = %d\n",son_read_num(&h,"name.age"));
+	printf("instock = %d\n",son_read_bool(&h,"name.instock"));
+	memset(buffer,0,32);
+	son_read_data(&h,"name.data",buffer,32);
+
+	    printf("name.data = %s\n",buffer);
 	son_close(&h, 0);
 
-	printf("last name is %s\n", buffer);
+
+
 
 }
 
@@ -64,7 +80,7 @@ void test_son_edit_unum(){
 
 	son_edit(&h,"/User/nkgau/Desktop/test.son");
 
-	ret = son_edit_unum(&h,"name.salary",300.0);
+	ret = son_edit_unum(&h,"name.salary",0xffffffff);
 
 	printf("ret is %d \n", ret);
 
@@ -72,7 +88,7 @@ void test_son_edit_unum(){
 
 	son_open(&h,"/Users/nkgau/Desktop/test.son");
 
-	printf("age = %d \n", son_read_unum(&h,"name.salary"));
+	printf("age = %u \n", son_read_unum(&h,"name.salary"));
 
 	son_close(&h,0);
 
@@ -142,12 +158,7 @@ void test_son_edit_method(){
 
 	son_set_driver(&h,0);
     son_edit(&h,"/Users/nkgau/Desktop/test.son");
-	//if (son_edit(&h,"/Users/nkgau/Desktop/test.son") < 0){
-	//	printf("Failed to open SON file \n");
-	//	exit(1);
-	//}
 
-	//son_open(&h,"/Users/nkgau/Desktop/test.son");
 
 	char buffer[32] = "Hell";
 
@@ -170,13 +181,86 @@ void test_son_edit_method(){
 }
 
 void test_son_edit_float(){
+	son_t h;
 
+	int ret;
+
+	printf("Use this method to test edit float SON\n");
+
+	son_set_driver(&h,0);
+
+	son_edit(&h,"/Users/nkgau/Desktop/test.son");
+
+
+	ret = son_edit_float(&h,"name.price",13.60);
+
+	printf("ret is %d\n",ret);
+
+	son_close(&h,0);
+
+	son_open(&h,"/Users/nkgau/Desktop/test.son");
+
+	printf("name.price = %f\n ",son_read_float(&h,"name.price"));
+
+	son_close(&h,0);
+}
+
+void test_son_edit_bool(){
+	son_t h;
+
+	int ret;
+
+	printf("Use this method to test edit bool SON\n");
+
+	son_edit(&h,"/Users/nkgau/Desktop/test.son");
+
+	ret = son_edit_bool(&h,"name.instock",TRUE);
+
+	printf("son_edit_bool ret = %d\n",ret);
+	son_close(&h,0);
+
+	son_open(&h,"/Users/nkgau/Desktop/test.son");
+
+	printf("name.instock %d \n",son_read_bool(&h,"name.instock"));
+
+	son_close(&h,0);
+
+}
+
+void test_son_edit_data(){
+    son_t h;
+
+    int ret;
+
+    char buffer[32];
+    printf("Use this method to test edit data SON\n");
+
+    son_edit(&h,"/Users/nkgau/Desktop/test.son");
+
+    char i[2] = "3";
+    	void * t = (void *) i;
+    ret = son_edit_data(&h,"name.data",t,2);
+
+    printf("son_edit_data() ret= %d\n",ret);
+
+    son_close(&h,0);
+
+    son_open(&h,"/Users/nkgau/Desktop/test.son");
+
+    son_read_data(&h,"name.data",buffer,32);
+
+    printf("name.data = %s\n",buffer);
+
+    son_close(&h,0);
 }
 
 int main(){
 	test_son_method1();//
     //test_son_edit_method();
 	//test_son_edit_str();
-	test_son_edit_num();
+	//test_son_edit_num();
+	//test_son_edit_float();
+	//test_son_edit_bool();
+	test_son_edit_data();
 	return 0;
 }
